@@ -3,7 +3,27 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrokerHub.API", "BrokerHub.API\BrokerHub.API.csproj", "{0BFB20A9-8097-49EF-914B-66634EC11C05}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BrokerHub.API", "BrokerHub.API\BrokerHub.API.csproj", "{0BFB20A9-8097-49EF-914B-66634EC11C05}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BrokerHubAPI", "BrokerHubAPI", "{886B049B-746D-4301-8F18-F6FA5E59882A}"
+	ProjectSection(SolutionItems) = preProject
+		.dockerignore = .dockerignore
+		BrokerHub.API\Dockerfile = BrokerHub.API\Dockerfile
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BrokerHub.Application", "BrokerHub.Application\BrokerHub.Application.csproj", "{29654521-14CF-4530-8EF9-816722F6C24D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrokerHub.Domain", "BrokerHub.Domain\BrokerHub.Domain.csproj", "{F09FA0AE-00E1-4DB8-9690-AAD28AD9E94E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrokerHub.Infrastructure", "BrokerHub.Infrastructure\BrokerHub.Infrastructure.csproj", "{6823DAA2-21D1-4260-8398-EDD40A1E8B69}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{6CB94727-7B57-457C-BBD9-740DD6EB5A39}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Aplication", "Aplication", "{1DA0A4E9-351D-4ABB-85BB-BE24FF5C7095}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{976312B2-B416-47CF-927C-4587B9B1D01D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{24A63FC8-8F42-4F7B-B723-A2C7D4BD85F6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +35,30 @@ Global
 		{0BFB20A9-8097-49EF-914B-66634EC11C05}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0BFB20A9-8097-49EF-914B-66634EC11C05}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0BFB20A9-8097-49EF-914B-66634EC11C05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29654521-14CF-4530-8EF9-816722F6C24D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29654521-14CF-4530-8EF9-816722F6C24D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29654521-14CF-4530-8EF9-816722F6C24D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29654521-14CF-4530-8EF9-816722F6C24D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F09FA0AE-00E1-4DB8-9690-AAD28AD9E94E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F09FA0AE-00E1-4DB8-9690-AAD28AD9E94E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F09FA0AE-00E1-4DB8-9690-AAD28AD9E94E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F09FA0AE-00E1-4DB8-9690-AAD28AD9E94E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6823DAA2-21D1-4260-8398-EDD40A1E8B69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6823DAA2-21D1-4260-8398-EDD40A1E8B69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6823DAA2-21D1-4260-8398-EDD40A1E8B69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6823DAA2-21D1-4260-8398-EDD40A1E8B69}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0BFB20A9-8097-49EF-914B-66634EC11C05} = {886B049B-746D-4301-8F18-F6FA5E59882A}
+		{29654521-14CF-4530-8EF9-816722F6C24D} = {886B049B-746D-4301-8F18-F6FA5E59882A}
+		{F09FA0AE-00E1-4DB8-9690-AAD28AD9E94E} = {886B049B-746D-4301-8F18-F6FA5E59882A}
+		{6823DAA2-21D1-4260-8398-EDD40A1E8B69} = {886B049B-746D-4301-8F18-F6FA5E59882A}
+		{1DA0A4E9-351D-4ABB-85BB-BE24FF5C7095} = {6CB94727-7B57-457C-BBD9-740DD6EB5A39}
+		{976312B2-B416-47CF-927C-4587B9B1D01D} = {6CB94727-7B57-457C-BBD9-740DD6EB5A39}
+		{24A63FC8-8F42-4F7B-B723-A2C7D4BD85F6} = {6CB94727-7B57-457C-BBD9-740DD6EB5A39}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7530CA6F-A2B9-4FD2-AF2E-C10FA2765F07}
