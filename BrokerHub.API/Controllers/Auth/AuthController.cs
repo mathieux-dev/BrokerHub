@@ -24,6 +24,9 @@ public class AuthController : ControllerBase
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
     public IActionResult Login([FromBody] LoginRequest request)
     {
+        // o ideal aqui era que houevsse um tabaela de usuários e que as credecenciais fossem validadas
+        // com os dados de lá e tals, mas por motivos de praticidade e demonstração optei pela velha
+        // tática.
         if (request.Email == "mateus.mourao@brokerhub.com" && request.Password == "garçagaiata")
         {
             var claims = new[]

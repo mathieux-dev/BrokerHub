@@ -1,6 +1,3 @@
-using BrokerHub.Application.Command.Imovel;
-using BrokerHub.Application.Command.Imovel.CreateImovel;
-
 namespace BrokerHub.Application.Common;
 
 public class ApiResponse<T>

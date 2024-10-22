@@ -6,7 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Moq;
 using System.IdentityModel.Tokens.Jwt;
 
-namespace BrokerHub.Tests.Controllers;
+namespace BrokerHub.API.Tests.Controllers;
 
 public class AuthControllerTests
 {

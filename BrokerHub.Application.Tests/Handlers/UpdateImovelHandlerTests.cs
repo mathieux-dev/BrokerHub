@@ -1,6 +1,5 @@
 using BrokerHub.Application.Command.Imovel.UpdateImovel;
 using BrokerHub.Application.DTOs;
-using BrokerHub.Application.Queries.Imovel.GetImovel;
 using BrokerHub.Domain.Entities;
 using BrokerHub.Domain.Enums;
 using BrokerHub.Domain.Interfaces;

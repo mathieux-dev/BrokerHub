@@ -23,6 +23,7 @@ public class ImovelController(IMediator mediator) : ControllerBase
     [HttpPost("create")]
     [ProducesResponseType(typeof(ImovelGenericResponse), StatusCodes.Status201Created)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
     public async Task<IActionResult> Create([FromBody] CreateImovelRequest request)
     {
         var result = await _mediator.Send(request);
@@ -42,6 +43,7 @@ public class ImovelController(IMediator mediator) : ControllerBase
     [HttpPut("update")]
     [ProducesResponseType(typeof(ImovelGenericResponse), StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
     public async Task<IActionResult> Update([FromBody] UpdateImovelRequest request)
     {
         var result = await _mediator.Send(request);
@@ -61,6 +63,7 @@ public class ImovelController(IMediator mediator) : ControllerBase
     [HttpDelete("delete")]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
     public async Task<IActionResult> Delete([FromQuery] DeleteImovelRequest request)
     {
         var result = await _mediator.Send(request);
