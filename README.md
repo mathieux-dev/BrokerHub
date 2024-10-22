@@ -9,7 +9,7 @@ BrokerHub é uma API para corretoras de imóveis, oferecendo funcionalidades com
 - Consulta de imóveis por id
 - Remoção de imóveis
 - Autenticação JWT para rotas protegidas
-- Disponibilidade de agenda (bônus opcional)
+- Disponibilidade de agenda (não implementado)
 
 ## Tecnologias Utilizadas
 
@@ -96,9 +96,9 @@ Authorization: Bearer <seu-token-jwt-aqui>
 
 As seguintes rotas exigem autenticação:
 
-- **POST** `/api/brokerhub/imoveis` - Criação de um imóvel
-- **PUT** `/api/brokerhub/imoveis/{id}` - Atualização de um imóvel
-- **DELETE** `/api/brokerhub/imoveis/{id}` - Remoção de um imóvel
+- **POST** `/api/brokerhub/imovel/create` - Criação de um imóvel
+- **PUT** `/api/brokerhub/imovel/update` - Atualização de um imóvel
+- **DELETE** `/api/brokerhub/imovel/delete` - Remoção de um imóvel
 
 ## Testes
 
