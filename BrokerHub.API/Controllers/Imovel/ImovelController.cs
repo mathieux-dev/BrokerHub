@@ -19,6 +19,9 @@ public class ImovelController(IMediator mediator) : ControllerBase
     /// <summary>
     /// Cria um novo imóvel.
     /// </summary>
+    /// <remarks>
+    /// Este endpoint requer autenticação e deve ser chamado por um usuário autenticado.
+    /// </remarks>
     [Authorize]
     [HttpPost("create")]
     [ProducesResponseType(typeof(ImovelGenericResponse), StatusCodes.Status201Created)]
@@ -39,6 +42,9 @@ public class ImovelController(IMediator mediator) : ControllerBase
     /// <summary>
     /// Atualiza um imóvel existente.
     /// </summary>
+    /// <remarks>
+    /// Este endpoint requer autenticação e deve ser chamado por um usuário autenticado.
+    /// </remarks>
     [Authorize]
     [HttpPut("update")]
     [ProducesResponseType(typeof(ImovelGenericResponse), StatusCodes.Status200OK)]
@@ -59,6 +65,9 @@ public class ImovelController(IMediator mediator) : ControllerBase
     /// <summary>
     /// Deleta um imóvel pelo ID.
     /// </summary>
+    /// <remarks>
+    /// Este endpoint requer autenticação e deve ser chamado por um usuário autenticado.
+    /// </remarks>
     [Authorize]
     [HttpDelete("delete")]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
@@ -79,6 +88,11 @@ public class ImovelController(IMediator mediator) : ControllerBase
     /// <summary>
     /// Obtém um imóvel pelo ID.
     /// </summary>
+    /// <param name="request">Os parâmetros para buscar o imóvel, incluindo o ID do imóvel.</param>
+    /// <returns>Retorna o imóvel encontrado.</returns>
+    /// <remarks>
+    /// Se o imóvel não for encontrado, o endpoint retornará um código de status 404 (Não Encontrado).
+    /// </remarks>
     [HttpGet("details")]
     [ProducesResponseType(typeof(GetImovelResponse), StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -97,6 +111,18 @@ public class ImovelController(IMediator mediator) : ControllerBase
     /// <summary>
     /// Obtém a lista de imóveis com base nos parâmetros de consulta.
     /// </summary>
+    /// <param name="query">Os parâmetros de filtro para a busca de imóveis, incluindo:
+    /// <list type="bullet">
+    /// <item><description><b>Localizacao</b>: Filtra imóveis por localização.</description></item>
+    /// <item><description><b>PrecoMin</b>: Filtra imóveis com preço mínimo.</description></item>
+    /// <item><description><b>PrecoMax</b>: Filtra imóveis com preço máximo.</description></item>
+    /// <item><description><b>Tipo</b>: Filtra por tipo de imóvel (ex: casa, apartamento).</description></item>
+    /// </list>
+    /// </param>
+    /// <returns>Retorna a lista de imóveis que atendem aos critérios especificados.</returns>
+    /// <remarks>
+    /// Se nenhum imóvel for encontrado, o endpoint retornará um código de status 404 (Não Encontrado).
+    /// </remarks>
     [HttpGet("list")]
     [ProducesResponseType(typeof(GetImovelListResponse), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(string), StatusCodes.Status404NotFound)]
