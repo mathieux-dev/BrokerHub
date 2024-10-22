@@ -1,5 +1,5 @@
 ﻿using Azure;
-using BrokerHub.API.Controllers;
+using BrokerHub.API.Controllers.Imovel;
 using BrokerHub.Application.Command.Imovel;
 using BrokerHub.Application.Command.Imovel.CreateImovel;
 using BrokerHub.Application.Command.Imovel.DeleteImovel;
