@@ -3,14 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{6CB94727-7B57-457C-BBD9-740DD6EB5A39}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Aplication", "Aplication", "{1DA0A4E9-351D-4ABB-85BB-BE24FF5C7095}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{976312B2-B416-47CF-927C-4587B9B1D01D}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{24A63FC8-8F42-4F7B-B723-A2C7D4BD85F6}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BrokerHub.Infrastructure", "BrokerHub.Infrastructure\BrokerHub.Infrastructure.csproj", "{5B6C688B-3727-4CA3-831F-89B65DC10452}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BrokerHub.API", "BrokerHub.API\BrokerHub.API.csproj", "{F372552E-38D7-4DDF-B90C-0E0D6F020F5F}"
@@ -19,9 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BrokerHub.Application", "Br
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BrokerHub.Domain", "BrokerHub.Domain\BrokerHub.Domain.csproj", "{397DD8F6-D896-4B8C-AE4D-D729BCFE67DF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrokerHub.API.Tests", "ImovelControllerTests\BrokerHub.API.Tests.csproj", "{F9E53CB6-B146-4DD2-8495-DC964B6BE45C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BrokerHub.API.Tests", "ImovelControllerTests\BrokerHub.API.Tests.csproj", "{F9E53CB6-B146-4DD2-8495-DC964B6BE45C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrokerHub.Application.Tests", "BrokerHub.Application.Tests\BrokerHub.Application.Tests.csproj", "{970E953A-8187-480F-A26F-16895EFDE7EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BrokerHub.Application.Tests", "BrokerHub.Application.Tests\BrokerHub.Application.Tests.csproj", "{970E953A-8187-480F-A26F-16895EFDE7EB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -56,11 +48,6 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{1DA0A4E9-351D-4ABB-85BB-BE24FF5C7095} = {6CB94727-7B57-457C-BBD9-740DD6EB5A39}
-		{976312B2-B416-47CF-927C-4587B9B1D01D} = {6CB94727-7B57-457C-BBD9-740DD6EB5A39}
-		{24A63FC8-8F42-4F7B-B723-A2C7D4BD85F6} = {6CB94727-7B57-457C-BBD9-740DD6EB5A39}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7530CA6F-A2B9-4FD2-AF2E-C10FA2765F07}
